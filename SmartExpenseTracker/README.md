@@ -70,11 +70,3 @@ node tests/project.test.mjs
 ```
 
 Use `--no-seed` with a new empty data folder to create your own first admin via the one-time setup link printed by Java. Use `--initialize-only` to create/open the database and exit. For browser tests, install Playwright and its Chromium browser, then run `node tests/browser.test.mjs`; `CHROME_EXECUTABLE` can select an existing Chromium binary. None of these testing dependencies is needed to use the website.
-
-## Upload to GitHub
-
-Extract this ZIP and upload the contents of this folder, including `.gitignore`. The package has already excluded databases, account files, fixed login details, browser captures, logs and compiled outputs. Upload before running it locally.
-
-`.gitignore` excludes future local databases, credentials, logs and test evidence when using Git. GitHub's browser upload does not apply `.gitignore`: if you run the app first, manually leave out `data/`, `build/`, `tests/browser-evidence/`, private settings and any logs when uploading. Keep personal CSV statements and backups outside the repository.
-
-Public source code includes authentication and password hashing logic; secret values are generated locally or supplied through environment variables. Synthetic test passwords and fixture emails are only for disposable tests. This package is for local use; uploading it does not deploy the Java server.
