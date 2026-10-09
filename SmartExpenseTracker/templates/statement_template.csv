@@ -1,0 +1,4 @@
+transaction_id,date,description,amount,direction,method,account
+REF-001,2026-09-29,College canteen,120.00,DEBIT,UPI,My bank
+REF-002,2026-09-29,Monthly allowance,15000.00,CREDIT,Bank,My bank
+REF-003,2026-09-30,Metro recharge,500.00,DEBIT,UPI,My bank

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#111410" />
+    <title>Open Smart Expense Tracker</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #eff1e9;
+        background: #111410;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px;
+      }
+      main {
+        width: 100%;
+        max-width: 870px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid #30372b;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .story {
+        background: #181e13;
+        padding: 48px 38px;
+        border-right: 1px solid #30372b;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+      }
+      .eyebrow {
+        color: #a9bd91;
+        font-size: 10px;
+        letter-spacing: 1.7px;
+        margin-top: 55px;
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: 500;
+        letter-spacing: -2px;
+        margin: 18px 0 24px;
+        transition: color 0.18s;
+      }
+      h1 span {
+        font-family: Georgia, serif;
+        font-style: italic;
+        color: #cbe7a1;
+      }
+      p {
+        color: #a3ab9c;
+        font-size: 13px;
+        line-height: 1.8;
+        margin: 0;
+      }
+      .main {
+        padding: 48px 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: -0.5px;
+        margin: 0 0 12px;
+        transition: color 0.18s;
+      }
+      .steps {
+        padding: 0;
+        list-style: none;
+        counter-reset: step;
+        margin: 22px 0 27px;
+      }
+      .steps li {
+        counter-increment: step;
+        display: flex;
+        gap: 13px;
+        color: #a3ab9c;
+        font-size: 13px;
+        padding: 9px 0;
+      }
+      .steps li::before {
+        content: "0" counter(step);
+        color: #cbe7a1;
+        font-size: 11px;
+        padding-top: 3px;
+      }
+      .steps strong {
+        color: #eff1e9;
+        font-weight: 500;
+      }
+      .links {
+        display: grid;
+        gap: 12px;
+      }
+      .links a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #111410;
+        background: #cbe7a1;
+        border: 1px solid #cbe7a1;
+        border-radius: 7px;
+        padding: 15px 17px;
+        font-size: 14px;
+        transition: background 0.18s;
+      }
+      .links a:last-child {
+        background: #22271e;
+        color: #eff1e9;
+        border-color: #3b4832;
+      }
+      .links a:hover {
+        background: #d7edba;
+      }
+      .links a:last-child:hover {
+        background: #2a3522;
+      }
+      .links a:hover span {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      a:focus-visible {
+        outline: 2px solid #cbe7a1;
+        outline-offset: 4px;
+      }
+      .note {
+        font-size: 11px;
+        margin-top: 22px;
+        line-height: 1.8;
+      }
+      .note code {
+        color: #d5deca;
+      }
+      .bottom {
+        font-size: 11px;
+        margin-top: 56px;
+        color: #a0b18e;
+      }
+      @media (hover: hover) {
+        h1:hover,
+        h2:hover {
+          color: #cbe7a1;
+        }
+      }
+      @media (max-width: 700px) {
+        body {
+          padding: 20px;
+        }
+        main {
+          grid-template-columns: 1fr;
+        }
+        .story {
+          padding: 30px 26px;
+          border-right: 0;
+          border-bottom: 1px solid #30372b;
+        }
+        .eyebrow {
+          margin-top: 26px;
+        }
+        h1 {
+          font-size: 38px;
+        }
+        .bottom {
+          margin-top: 25px;
+        }
+        .main {
+          padding: 30px 26px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="story">
+        <div class="brand">Smart Expense / Personal finance</div>
+        <div class="eyebrow">YOUR MONEY. A CLEARER PICTURE.</div>
+        <h1>Open your<br /><span>tracker.</span></h1>
+        <p>
+          Your accounts, expenses and budgets are saved by the Java website.
+          Start it once, then choose your workspace.
+        </p>
+        <div class="bottom">Expenses · Budgets · Reports / INR ₹</div>
+      </section>
+      <section class="main">
+        <h2>Start the website</h2>
+        <p>Use the project ZIP that came with this HTML file.</p>
+        <ol class="steps">
+          <li>
+            <span
+              >Extract the <strong>complete ZIP</strong> into a folder.</span
+            >
+          </li>
+          <li>
+            <span
+              >Open <strong>run.bat</strong> on Windows, or run
+              <strong>sh run.sh</strong> on Mac/Linux. Requires JDK 17+.</span
+            >
+          </li>
+          <li>
+            <span>Keep the Java window open and choose a login below.</span>
+          </li>
+        </ol>
+        <div class="links">
+          <a href="http://127.0.0.1:8080/#login=user"
+            ><span>User login</span><span aria-hidden="true">↗</span></a
+          ><a href="http://127.0.0.1:8080/#login=admin"
+            ><span>Admin login</span><span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <p class="note">
+          The server opens at <code>http://127.0.0.1:8080</code>. First-install
+          passwords appear once in the local Java window. Save them privately.
+          This HTML opens the website; run.bat starts its server and database.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
