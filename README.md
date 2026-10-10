@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33293256/README.md)
 # PocketSync
 
 **Spend smart. Stay in sync.**
