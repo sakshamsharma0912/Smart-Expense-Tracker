@@ -1,0 +1,7 @@
+{
+  "name": "pocketsync-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/*.test.js", "check": "node --check src/main/resources/static/app.js" },
+  "engines": { "node": ">=22" }
+}

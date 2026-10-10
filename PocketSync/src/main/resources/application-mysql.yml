@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:mysql://127.0.0.1:3306/expense_tracker?serverTimezone=UTC}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+expense:
+  cookie-secure: ${COOKIE_SECURE:true}

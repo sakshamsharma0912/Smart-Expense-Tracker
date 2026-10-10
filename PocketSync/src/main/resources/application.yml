@@ -1,0 +1,35 @@
+server:
+  port: ${PORT:8080}
+  address: ${BIND_ADDRESS:127.0.0.1}
+  forward-headers-strategy: ${FORWARD_HEADERS_STRATEGY:none}
+  error:
+    include-message: never
+spring:
+  application:
+    name: pocketsync
+  datasource:
+    url: jdbc:h2:file:./data/expense-v5;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: ${H2_PASSWORD:}
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate.type.preferred_instant_jdbc_type: TIMESTAMP
+      hibernate.jdbc.time_zone: UTC
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 3MB
+expense:
+  jwt-secret: ${JWT_SECRET:}
+  cookie-secure: ${COOKIE_SECURE:false}
+  issuer: urn:smart-expense-tracker
+  access-seconds: 900
+  bootstrap-email: ${BOOTSTRAP_ADMIN_EMAIL:}
+  bootstrap-name: ${BOOTSTRAP_ADMIN_NAME:Project owner}
+  bootstrap-password: ${BOOTSTRAP_ADMIN_PASSWORD:}
+  migration-source: ${V4_H2_PATH:}

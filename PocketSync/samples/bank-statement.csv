@@ -1,0 +1,8 @@
+transaction_id,date,description,amount,direction,method,account,tax_amount
+DEMO-1001,2026-10-01,Zomato lunch,250.00,DEBIT,UPI,Demo account,12.50
+DEMO-1002,2026-10-02,Monthly salary,15000.00,CREDIT,Bank,Demo account,0
+DEMO-1003,2026-10-03,Uber ride,180.00,DEBIT,UPI,Demo account,0
+DEMO-1004,2026-10-04,Amazon refund,300.00,CREDIT,Card,Demo account,0
+DEMO-1005,2026-10-05,Self transfer to own account,1000.00,DEBIT,Bank,Demo account,0
+DEMO-1006,2026-10-06,College course books,950.00,DEBIT,Card,Demo account,0
+DEMO-1007,2026-10-07,Electricity bill,620.00,DEBIT,UPI,Demo account,0
